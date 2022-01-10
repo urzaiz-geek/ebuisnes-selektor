@@ -1,0 +1,14 @@
+
+.standard-button {
+	-fx-text-fill:white;
+	-fx-background-color:#009688;
+}
+
+.standard-button:hover {
+	-fx-background-color:#4db6ac; 
+}
+
+.text-field,.password-field {
+	-fx-background-color: transparent;
+	-fx-border-width: 0 0 1 0;
+}

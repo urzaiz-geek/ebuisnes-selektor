@@ -3,15 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.urzaizcoding</groupId>
-	<artifactId>elektordektop</artifactId>
+	<artifactId>elektordesktop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
-
-
 	<dependencies>
 		<dependency>
 			<groupId>org.openjfx</groupId>
@@ -24,21 +22,25 @@
 			<version>13</version>
 		</dependency>
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.22</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>font-awesome</artifactId>
-			<version>5.15.4</version>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-graphics</artifactId>
+			<version>13</version>
 		</dependency>
 		<dependency>
 			<groupId>com.urzaizcoding</groupId>
-			<artifactId>ulangerfxtools</artifactId>
-			<version>1.1</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/exlibs/ulangerfxtools-1.1.jar</systemPath>
+			<artifactId>ulangerproxy</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.8.2</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.jfoenix</groupId>
+			<artifactId>jfoenix</artifactId>
+			<version>8.0.10</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -56,7 +58,7 @@
 				<artifactId>javafx-maven-plugin</artifactId>
 				<version>0.0.3</version>
 				<configuration>
-					<mainClass>com.urzaizcoding.elektordektop.App</mainClass>
+					<mainClass>com.urzaizcoding.elektordesktop.App</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
