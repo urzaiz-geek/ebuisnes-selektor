@@ -1,0 +1,55 @@
+:description
+	name = Français
+	codeName = Fr
+	application = elektordesktop
+	version = 0.0.1-SNAPSHOT
+:endDescription
+:beg
+	:class = LoginController
+		:field
+			id = labelLogin
+			method = setText
+			value = "Connexion"
+		:endField
+		:field
+			id = labelUserName
+			method = setText
+			value = "Nom d'utilisateur"
+		:endField
+		:field
+			id = labelPassword
+			method = setText
+			value = "Mot de passe"
+		:endField
+		:field
+			id = checkBoxShowPassword
+			method = setText
+			value = "mot de passe visible"
+		:endField
+		:field
+			id = buttonLogin
+			method = setText
+			value = "Connexion"
+		:endField
+		:field
+			id = textFieldUserName
+			method = setPromptText
+			value = "Nom d'utilisateur"
+		:endField
+		:field
+			id = passwordFieldPassHidden
+			method = setPromptText
+			value = "Mot de passe"
+		:endField
+		:field
+			id = textFieldPassVisible
+			method = setPromptText
+			value = "Mot de passe"
+		:endField
+		:field
+			id = errorNotification
+			method = --inject
+			value = "nom d'utilisateur et/ou mot de passe incorrects"
+		:endField
+	:endClass
+:end

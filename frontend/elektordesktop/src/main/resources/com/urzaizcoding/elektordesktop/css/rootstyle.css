@@ -1,0 +1,18 @@
+
+.button-dash {
+	-fx-background-color: transparent;
+	-fx-text-fill:white;
+}
+
+.button-dash:hover {
+	-fx-background-color: rgb(47, 158, 65);
+}
+
+#label-close:hover {
+	-fx-bacground-color: red;
+	-fx-text-fill:white;
+}
+
+.image-view-titlebar:hover {
+	-fx-background-color:white;
+}

@@ -7,5 +7,5 @@ module com.urzaizcoding.elektordesktop {
     opens com.urzaizcoding.elektordesktop to javafx.fxml;
     exports com.urzaizcoding.elektordesktop;
     exports com.urzaizcoding.elektordesktop.controllers;
-    opens com.urzaizcoding.elektordesktop.controllers to javafx.fxml;
+    opens com.urzaizcoding.elektordesktop.controllers to javafx.fxml,com.urzaizcoding.ulangerproxy;
 }
