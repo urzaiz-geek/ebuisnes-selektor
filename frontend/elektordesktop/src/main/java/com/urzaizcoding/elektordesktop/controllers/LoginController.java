@@ -13,7 +13,6 @@ import com.urzaizcoding.ulangerproxy.graphics.GraphicFacilities;
 import com.urzaizcoding.ulangerproxy.lang.LanguageParser;
 import com.urzaizcoding.ulangerproxy.log.Logger;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -112,7 +111,7 @@ public class LoginController extends BaseControllerLanguageHandlable {
 
 	@FXML
 	void handleCloseLabelClicked(MouseEvent event) {
-		Platform.exit();
+		close();
 	}
 
 	@Override

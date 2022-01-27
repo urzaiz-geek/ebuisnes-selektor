@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="595.0" prefWidth="709.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="23.0" layoutY="18.0" prefHeight="61.0" prefWidth="709.0" spacing="5.0" style="-fx-background-color: rgb(60, 77, 172);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="ACCUEIL" textFill="#e0e0e0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="/CLIENTS" textFill="#fafafa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="73.0" spacing="10.0">
+         <children>
+            <Button fx:id="addClientButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #009688; -fx-cursor: hand;" text="Ajouter client" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="editClientButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #009688; -fx-cursor: hand;" text="Editer client" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="deleteClientButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" style="-fx-background-color: #009688; -fx-cursor: hand;" text="Supprimer client" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/minus-clean.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="reloadButton" alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #009688; -fx-cursor: hand;" text="Supprimer client" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/reload.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <TextField fx:id="searchTextField" layoutX="509.0" layoutY="73.0" prefHeight="30.0" prefWidth="182.0" promptText="recherche" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: black;" AnchorPane.rightAnchor="18.0" />
+      <TableView fx:id="tableViewDisplayClients" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="394.0" prefWidth="685.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="116.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" maxWidth="1.7976931348623157E308" prefWidth="129.0" text="Noms" />
+          <TableColumn fx:id="emailColumn" maxWidth="1.7976931348623157E308" prefWidth="141.0" text="Email" />
+            <TableColumn fx:id="addressColumn" maxWidth="1.7976931348623157E308" prefWidth="110.0" text="Adresse" />
+            <TableColumn fx:id="phoneColumn" maxWidth="1.7976931348623157E308" prefWidth="113.0" text="Téléphones" />
+            <TableColumn fx:id="typeColumn" maxWidth="1.7976931348623157E308" prefWidth="99.0" text="Type" />
+            <TableColumn fx:id="ordersColumn" maxWidth="1.7976931348623157E308" prefWidth="92.0" text="Commandes" />
+        </columns>
+      </TableView>
+      <Pagination fx:id="clientPagination" layoutX="562.0" layoutY="502.0" prefHeight="79.0" prefWidth="129.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="18.0" />
+   </children>
+</AnchorPane>

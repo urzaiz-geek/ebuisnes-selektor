@@ -13,20 +13,19 @@
 
 <AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="860.0" stylesheets="@../css/rootstyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane fx:id="rootPane" layoutX="133.0" layoutY="30.0" prefHeight="599.0" prefWidth="736.0" style="-fx-background-color: #FFFF;" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="124.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
       <HBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="860.0" spacing="10.0" style="-fx-background-color: rgb(241, 241, 241);" stylesheets="@../css/applicationrem.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view-titlebar">
+            <ImageView fx:id="imageViewHide" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#handleImageViewHideClicked" pickOnBounds="true" preserveRatio="true" styleClass="image-view-titlebar">
                <image>
                   <Image url="@../images/icons8-minimize-window-32.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view-titlebar">
+            <ImageView fx:id="imageViewRestore" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#handleReduceImageViewClicked" pickOnBounds="true" preserveRatio="true" styleClass="image-view-titlebar">
                <image>
                   <Image url="@../images/icons8-restore-window-32.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imageViewClose" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#handleImageViewCloseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/icons8-close-32.png" />
                </image>
@@ -37,19 +36,19 @@
          <children>
             <Group>
                <children>
-                  <Label alignment="CENTER" layoutY="81.0" prefHeight="25.0" prefWidth="123.0" text="User" textFill="WHITE">
+                  <Label fx:id="labelUserName" alignment="CENTER" layoutY="81.0" prefHeight="25.0" prefWidth="123.0" text="User" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="79.0" fitWidth="75.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imageViewUserPic" fitHeight="79.0" fitWidth="75.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/user-profile.png" />
                      </image>
                   </ImageView>
                </children>
             </Group>
-            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Commandes">
+            <Button fx:id="buttonOrders" contentDisplay="TOP" mnemonicParsing="false" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Commandes">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -58,7 +57,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Inventaire">
+            <Button fx:id="buttonInventory" contentDisplay="TOP" mnemonicParsing="false" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Inventaire">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -67,7 +66,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Ventes">
+            <Button fx:id="buttonSales" contentDisplay="TOP" mnemonicParsing="false" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Ventes">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -76,7 +75,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Clients">
+            <Button fx:id="buttonClients" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleButtonClientsAction" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Clients">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -85,7 +84,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Fournisseurs">
+            <Button fx:id="buttonSuppliers" contentDisplay="TOP" mnemonicParsing="false" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Fournisseurs">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -94,7 +93,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Rapports">
+            <Button fx:id="buttonReports" contentDisplay="TOP" mnemonicParsing="false" prefHeight="45.0" prefWidth="111.0" styleClass="button-dash" text="Rapports">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -107,7 +106,7 @@
       </VBox>
       <HBox spacing="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
          <children>
-            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="35.0" prefWidth="40.0" styleClass="button-dash" text="Button">
+            <Button fx:id="buttonHelp" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="35.0" prefWidth="40.0" styleClass="button-dash" text="Button">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -116,7 +115,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="35.0" prefWidth="40.0" styleClass="button-dash" text="Button">
+            <Button fx:id="buttonSettings" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="35.0" prefWidth="40.0" styleClass="button-dash" text="Button">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -125,7 +124,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="35.0" prefWidth="40.0" styleClass="button-dash" text="Button">
+            <Button fx:id="buttonLogout" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="35.0" prefWidth="40.0" styleClass="button-dash" text="Button">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -139,9 +138,10 @@
       <Separator prefHeight="1.0" prefWidth="127.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" />
       <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="718.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="124.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label prefHeight="40.0" prefWidth="29.0" text="infos" />
+            <Label fx:id="labelInfos" prefHeight="40.0" prefWidth="29.0" text="infos" />
          </children>
       </HBox>
       <Label prefHeight="25.0" prefWidth="75.0" text="Elektor" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="3.0" />
+      <AnchorPane fx:id="rootPane" layoutX="133.0" layoutY="30.0" prefHeight="599.0" prefWidth="736.0" style="-fx-background-color: #FFFF;" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
    </children>
 </AnchorPane>
